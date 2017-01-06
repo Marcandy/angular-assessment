@@ -12,11 +12,15 @@
         <div class="product-grid__meta">
             <!--Title click Should redirect to the product-details section. remember to pass along the product id so you can make an api call
         to get the specific product details-->
-            <h3 class="product-grid__name"><a ui-sref= "detail({id: product.id })" ng-click="getDetails()"><!--Title--> {{product.title}}</a></h3>
+            <h3 class="product-grid__name"><a ui-sref= "detail({id: product.id})" ><!--Title--> {{product.title}}</a></h3>
+            <!-- ng-click="getInfo({id: product.id})" -->
+            <!-- might need to change it so you can you both intiave the chage the state and then call the http request from the controller-->
 
             <!--Product Description-->
             <h4 class="product-grid__sub"><!--Desc-->{{product.desc}}</h4>
-
+            <div  class="">
+              test
+            </div>
             <!--Product Price-->
-            <div class="product-grid__price" ng-click='test()'><!--Price--> {{product.price}}</div>
+            <div class="product-grid__price"> <a ></a> <!--Price--> {{product.price}}</div>
         </div>
