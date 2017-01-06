@@ -6,13 +6,15 @@ angular.module('assessment')
       console.log($scope.data);
     })
 
-    let itemId = $stateParams.id;
+    $scope.item = $stateParams.id;
 
 
-    $scope.getDetails = mainService.getDetails(itemId).then(function (result) {
-        console.log(result);
-        $scope.detail = result;
-      })
+    $scope.getDetails = mainService.getDetails($scope.item).then(function (result) {
+          console.log(result);
+          $scope.detail = result;
+        })
+
+
 
       $scope.display = false;
 
@@ -23,9 +25,8 @@ angular.module('assessment')
       templateUrl: './views/product-tmpl.html',
       scope: {
         product: '=',
-        getDetails: '&',
-        display: '='
-
+        getInfo: '&',//having trouble based
+        item: '='
       }
     }
 
