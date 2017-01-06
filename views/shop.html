@@ -1,7 +1,8 @@
-<div class="product-grid__item   grid__item one-half large--one-third" >
+<div class="product-grid__item   grid__item one-half large--one-third" ng-repeat='product in products' >
+
 
     <!--Repeat over your data and display it below -->
-
+  <pro-directive product='product' display='display' getDetails='getDetails' test='hello'></pro-directive>
     <!--Product skeleton-->
         <!--Product Image-->
         <!--Product Image click collapse the image-->
@@ -17,7 +18,7 @@
             <!--Title click Should redirect to the product-details section. remember to pass along the product id so you can make an api call
         to get the specific product details-->
             <h3 class="product-grid__name"><a><!--Title--></a></h3>
-            
+
             <!--Product Description-->
             <h4 class="product-grid__sub"><!--Desc--></h4>
 
